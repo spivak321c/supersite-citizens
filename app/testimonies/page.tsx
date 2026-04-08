@@ -79,7 +79,7 @@ export default function TestimoniesPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12">
-          
+
           {/* Submission Form */}
           <div className="lg:col-span-5 lg:order-2">
             <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden sticky top-28">
@@ -96,7 +96,7 @@ export default function TestimoniesPage() {
               <div className="p-6">
                 <AnimatePresence mode="wait">
                   {formStatus === 'success' ? (
-                    <motion.div 
+                    <motion.div
                       key="success"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -109,7 +109,7 @@ export default function TestimoniesPage() {
                       <p className="text-sm text-gray-600 mb-6">
                         Thank you for sharing your testimony! It has been submitted successfully and is currently under review by our team before being published.
                       </p>
-                      <button 
+                      <button
                         onClick={() => {
                           setFormStatus('idle');
                           setFileName(null);
@@ -120,12 +120,12 @@ export default function TestimoniesPage() {
                       </button>
                     </motion.div>
                   ) : (
-                    <motion.form 
+                    <motion.form
                       key="form"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      onSubmit={handleSubmit} 
+                      onSubmit={handleSubmit}
                       className="space-y-5"
                     >
                       <div className="space-y-1.5">
@@ -144,15 +144,15 @@ export default function TestimoniesPage() {
                         <label className="text-sm font-medium text-gray-700">Full Testimony</label>
                         <textarea required rows={5} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all resize-none text-sm" placeholder="Share the details of what God did..."></textarea>
                       </div>
-                      
+
                       <div className="space-y-1.5">
                         <label className="text-sm font-medium text-gray-700">Optional Media (Image/Video)</label>
                         <div className="relative border-2 border-dashed border-gray-200 rounded-xl p-4 text-center hover:bg-gray-50 transition-colors cursor-pointer">
-                          <input 
-                            type="file" 
-                            accept="image/*,video/*" 
+                          <input
+                            type="file"
+                            accept="image/*,video/*"
                             onChange={handleFileChange}
-                            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" 
+                            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                           />
                           <div className="flex flex-col items-center justify-center gap-2 text-gray-500">
                             <Upload className="w-6 h-6 text-accent" />
@@ -163,7 +163,7 @@ export default function TestimoniesPage() {
                         </div>
                       </div>
 
-                      <button 
+                      <button
                         disabled={formStatus === 'submitting'}
                         className="w-full bg-primary text-white py-3.5 rounded-xl font-bold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-70 mt-2"
                       >
@@ -196,26 +196,26 @@ export default function TestimoniesPage() {
                   className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 relative overflow-hidden"
                 >
                   <Quote className="absolute top-6 right-6 w-12 h-12 text-gray-50 rotate-180" />
-                  
+
                   <div className="relative z-10">
                     <h3 className="font-heading font-bold text-xl text-primary mb-3">{testimony.title}</h3>
-                    
+
                     {testimony.image && (
                       <div className="relative w-full h-48 rounded-xl overflow-hidden mb-4">
-                        <Image 
-                          src={testimony.image} 
-                          alt="Testimony Media" 
-                          fill 
+                        <Image
+                          src={testimony.image}
+                          alt="Testimony Media"
+                          fill
                           className="object-cover"
                           referrerPolicy="no-referrer"
                         />
                       </div>
                     )}
-                    
+
                     <p className="text-gray-600 leading-relaxed mb-6 italic">
                       "{testimony.content}"
                     </p>
-                    
+
                     <div className="flex items-center justify-between pt-4 border-t border-gray-50">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold text-sm">

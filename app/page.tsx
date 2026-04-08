@@ -1,22 +1,20 @@
 import Hero from '@/components/Hero';
-import About from '@/components/About';
-import QuickLinks from '@/components/QuickLinks';
-import FeaturedResources from '@/components/FeaturedResources';
-import UpcomingPrograms from '@/components/UpcomingPrograms';
+import MentorProfile from '@/components/MentorProfile';
+import Mission from '@/components/Mission';
+import BenefitsGrid from '@/components/BenefitsGrid';
+import FormatsGrid from '@/components/FormatsGrid';
 import TestimoniesPreview from '@/components/TestimoniesPreview';
-import Community from '@/components/Community';
 import FinalCTA from '@/components/FinalCTA';
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
       <Hero />
-      <About />
-      <QuickLinks />
-      <FeaturedResources />
-      <UpcomingPrograms />
+      <MentorProfile />
+      <Mission />
+      <BenefitsGrid />
+      <FormatsGrid />
       <TestimoniesPreview />
-      <Community />
       <FinalCTA />
     </div>
   );

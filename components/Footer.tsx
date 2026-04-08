@@ -13,7 +13,7 @@ export default function Footer() {
                 <span className="text-primary font-heading font-bold text-xl">S</span>
               </div>
               <span className="font-heading font-bold text-2xl text-white tracking-tight">
-                The Supersite
+                The SuperSite Citizens
               </span>
             </div>
             <p className="text-gray-300 leading-relaxed">
@@ -81,7 +81,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm text-center md:text-left">
-            &copy; {new Date().getFullYear()} The Supersite. All rights reserved.
+            &copy; {new Date().getFullYear()} The SuperSite Citizens. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-400">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

@@ -37,7 +37,7 @@ export default function FeaturedResources() {
     {
       id: 4,
       title: "Atmosphere for Miracles",
-      author: "The Supersite Choir",
+      author: "The SuperSite Citizens Choir",
       type: "Audio Album",
       price: "₦1,500",
       image: "https://picsum.photos/seed/audio2/400/400",

@@ -49,7 +49,7 @@ export default function UpcomingPrograms() {
       title: "Youth Empowerment Masterclass",
       date: "May 10, 2026",
       time: "10:00 AM WAT",
-      location: "SuperSite Citizens Hub",
+      location: "Supersite Hub",
       isMain: false
     }
   ];

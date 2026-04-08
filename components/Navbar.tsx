@@ -10,10 +10,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Resources', href: '/resources' },
-    { name: 'Prayer & Counselling', href: '/prayer' },
+    { name: 'Prayer', href: '/prayer' },
     { name: 'Testimonies', href: '/testimonies' },
-    { name: 'Programs', href: '/#programs' },
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function Navbar() {
                 <span className="text-accent font-heading font-bold text-xl">S</span>
               </div>
               <span className="font-heading font-bold text-2xl text-primary tracking-tight">
-                 SuperSite Citizens
+                The SuperSite Citizens
               </span>
             </Link>
           </div>
@@ -48,16 +48,10 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="#partner"
-              className="text-primary font-medium hover:text-primary/80 transition-colors"
-            >
-              Partner
-            </Link>
-            <Link
-              href="#join"
+              href="/register"
               className="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary/90 transition-colors shadow-md hover:shadow-lg"
             >
-              Join Now
+              Enroll Today
             </Link>
           </div>
 
@@ -95,18 +89,11 @@ export default function Navbar() {
               ))}
               <div className="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3 px-3">
                 <Link
-                  href="#partner"
-                  onClick={() => setIsOpen(false)}
-                  className="block text-center text-primary font-medium py-2"
-                >
-                  Partner
-                </Link>
-                <Link
-                  href="#join"
+                  href="/register"
                   onClick={() => setIsOpen(false)}
                   className="block text-center bg-primary text-white px-6 py-3 rounded-full font-medium"
                 >
-                  Join Now
+                  Enroll Today
                 </Link>
               </div>
             </div>

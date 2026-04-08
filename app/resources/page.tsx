@@ -74,8 +74,8 @@ export default function ResourcesPage() {
     setIsLoading(true);
     // Simulate network request
     const timer = setTimeout(() => {
-      const filtered = activeTab === 'all' 
-        ? mockProducts 
+      const filtered = activeTab === 'all'
+        ? mockProducts
         : mockProducts.filter(p => p.category === activeTab);
       setProducts(filtered);
       setIsLoading(false);
@@ -110,11 +110,10 @@ export default function ResourcesPage() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as Category)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all ${
-                activeTab === tab.id
+              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all ${activeTab === tab.id
                   ? 'bg-accent text-primary shadow-md'
                   : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-              }`}
+                }`}
             >
               {tab.icon}
               {tab.label}
@@ -192,7 +191,7 @@ export default function ResourcesPage() {
             ))}
           </div>
         ) : (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-20 bg-white rounded-3xl border border-gray-100 shadow-sm"
@@ -204,7 +203,7 @@ export default function ResourcesPage() {
             <p className="text-gray-500 max-w-md mx-auto">
               We couldn't find any resources in this category at the moment. Please check back later for new additions.
             </p>
-            <button 
+            <button
               onClick={() => setActiveTab('all')}
               className="mt-8 text-accent font-bold hover:text-primary transition-colors underline underline-offset-4"
             >

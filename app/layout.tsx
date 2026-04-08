@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: 'Raising Supersite Citizens for Maximum Kingdom Impact. A comprehensive faith-based digital ecosystem.',
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="min-h-screen flex flex-col antialiased" suppressHydrationWarning>
